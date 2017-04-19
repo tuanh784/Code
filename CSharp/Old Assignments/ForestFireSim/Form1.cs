@@ -18,8 +18,7 @@ namespace ForestFireSim
         Brush greenB = new SolidBrush(Color.Green);
         Brush blackB = new SolidBrush(Color.Black);
         Brush redB = new SolidBrush(Color.Red);
-        LinkList toBurn = new LinkList();
-        LinkList burning = new LinkList();
+        LinkList toBurn,burning;
         Boolean isActive;
 
         public Form1()
@@ -42,6 +41,8 @@ namespace ForestFireSim
             }
             isActive = true;
             timer1.Stop();
+            toBurn = new LinkList();
+            burning = new LinkList();
             pictureBox1.Invalidate();
         }
         //start the fire from the left side of the forest and start the timer which will iterate the burning
